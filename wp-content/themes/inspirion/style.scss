@@ -1,0 +1,271 @@
+/*   
+Theme Name: Inspirion Biosciences
+Theme URI: http://www.inspirionbio.com
+Description: Custom Wordpress Theme developed by Michael Roach
+Author: Power Marketing
+Author URI: http://www.power-marketing.com/
+*/
+
+$white:#ffffff;
+$black: #000;
+
+$green:#8DC63F;
+$gray:#4B4F54;
+$gray-light:#F6F6F6;
+$gray-button:#B2B2B2;
+$gray-hero:#E4E4E4;
+
+html {}
+body{}
+
+.front-page-content {margin-top:12px;}
+.page-content {margin-top:12px;}
+.banner {margin:0 0 2rem; width:100%; height:150px; background-repeat:no-repeat; background-position:center; background-size:contain;}
+
+.page-wrap {padding:2rem 0 0;}
+
+.home {
+  .hero {background-color:$gray-hero; background-image:url('img/hero-image.jpg'); background-position:center top; background-repeat:no-repeat; width:100%; height:237px; border-bottom:1px solid $gray; margin-bottom:55px;
+    .slogan {position:absolute; top:50%; transform: translateY(-50%); font-size:4rem; font-weight:bold; font-family: 'Roboto', sans-serif; padding-left:15px;}
+  }
+}
+
+
+
+/*
+.industries-served {margin:60px auto 20px;
+  h2 {color:$gray; text-align:center; margin:0 0 40px;}
+  .card {display:table-cell; width:20%; text-align:center; border:1px solid transparent; transition:all 0.5s;
+    &:hover {background:$gray-light; border:1px solid darken($gray-light, 5%);
+      img {filter:brightness(80%);}
+    }
+    a {color:$gray; display:block; padding:15px;}
+    .icon-table {display:table; text-align:center; width:100%; height:100px;
+      .icon-wrap {display:table-cell; vertical-align:bottom;}
+      img {margin-bottom:1rem; transition:all 0.5s;}
+      img.academic {max-width:120px;}
+      img.property {max-width:63px;}
+      img.healthcare {max-width:72px;}
+      img.federal {max-width:86px;}
+      img.production {max-width:116px;}
+      img.international {max-width:70px;}
+      img.diagnostic {max-width:113px;}
+      img.new-lab {max-width:68px;}
+      img.insurance {max-width:75px;}
+    }
+    p {margin-bottom:0; font-size:0.75rem;}
+  }
+  .center-me {margin:0 auto; text-align:center !important; display:table; width:83%;}
+}
+*/
+
+.industries-served {margin:60px auto 20px;
+  h2 {color:$gray; text-align:center; margin:0 0 40px;}
+  .flex-container {display:flex; flex-wrap:wrap; justify-content:center;
+    .card {width:20%; display:flex; flex-direction:column;
+      &:hover {
+        .card-padding {background:darken($gray-light, 3%);}
+        img {filter:brightness(80%);}
+      }
+      a {color:$gray; display:block;}
+      .card-padding {margin:0.5rem; padding:2rem 1rem 1rem; background:$gray-light; transition:background 0.35s;}
+      img {margin:0 auto 1rem; display:block; transition:all 0.5s; width:120px;}
+      p {margin-bottom:0; font-size:0.75rem; text-align:center;}
+    }
+  }
+}
+
+blockquote {
+  a {color:$white;
+    &:hover {color:$white;}
+  }
+  p:last-child {margin-bottom:0;}
+}
+
+.sidebar-content {padding:12px 3px 0;
+  ul.widgets-list {margin:0 0 2rem 0;
+    li {list-style:none;}
+  }
+}
+.caution-facts {padding:12px 3px 0;
+  h2 {margin:0;}
+  h4 {color:$gray; font-size:.938rem; margin:0 0 1.25rem;}
+  p {font-size:0.875rem; margin-bottom:1.25rem;}
+}
+  
+header { border-bottom:1px solid $gray; z-index:500; position:fixed; width:100%; background:rgba(255,255,255,1); transition:background 0.35s;
+  .header-flex-container {display:flex; justify-content:space-between; align-items:flex-end; position:relative; padding:50px 0 40px; transition:padding 0.35s;
+    .logo {
+      img {max-width:250px;}
+    }
+    nav {position:relative; bottom:-12px;
+      // Top Level Links
+      ul {margin:0;
+        li {list-style:none; display:inline-block; margin-left:1.5rem;
+          a {color:$gray; display:block; margin:0; padding-bottom:8px;}
+          &:first-child {margin-left:0;}
+        }
+        // Hide Top-Level
+        li.menu-item-has-children  {
+          a:hover{color:$gray; cursor: default;}
+          ul li { a:hover {cursor:pointer !important; color:$green;}}
+        }
+        li:hover > a {color:$green;}
+        li:hover ul {display:block; position:absolute;}
+        // Sub Navigation
+        ul {background:$white; display:none; box-shadow:3px 3px 6px rgba(0,0,0,0.2); width:250px;
+          li {display:block; margin-left:0;
+            a {color:$gray; font-size:0.75rem; display:block; margin:0; padding:6px 12px;
+              &:hover {background:$gray-light;}
+            }
+          &:hover > a {color:$green;}
+          }
+        }
+      }
+    }
+  }
+  .employment-button {position:absolute; right:15px; top:0;  background:$gray-button; border-radius:0 0 5px 5px; transition:all 0.25s;
+      a {display:block; color:$white; font-size:0.813rem; font-weight:bold; padding:0.5rem 1.25rem 0.5rem;}
+      &:hover {background:darken($gray-button, 10%);}
+    }
+}
+
+header.shrink {background:rgba(255,255,255,0.95);
+  .header-flex-container {padding:20px 0 20px;}
+}
+
+.push-down {content:''; margin-top:141px;}
+
+// Mobile Button
+a.right-off-canvas-toggle {color:$gray; font-size:1.5rem; font-family:"Roboto", sans-serif;
+  i {color:$green; line-height:inherit;}
+}
+
+// Mobile Navigation
+aside.right-off-canvas-menu {background:$gray;
+  nav {
+    // Mobile Top Level
+    ul {margin-left:0; margin:0; 
+      li {list-style:none; display:block;
+        a {font-size:1rem; display:block; margin-bottom:2px; padding:10px 0 10px 15px; background:darken($gray,5%);}
+      }
+    // Mobile Sub Navigation
+    ul {margin-left:10px;
+      li {
+        a {font-size:0.875rem; color:$white; background:none;}
+} } } } }
+
+footer {margin-top:3.125rem; background:$gray; color:$white; padding:1.875rem 0 1.5rem; font-size:0.875rem;
+  .logo {max-width:200px; margin-bottom:22px;}
+  p {font-size:inherit; margin-bottom:0;}
+  ul.contact {margin-left:0; font-size:inherit; margin-bottom:0;
+    li {list-style:none; font-size:inherit;}
+  }
+  ul.social {margin:0; position:absolute; bottom:0;
+    li {list-style:none;
+      a {color:$green; font-size:1.5rem;
+        &:hover {color:darken($green, 10%);}
+      }
+    }
+  }
+}
+.colophon {
+  p {margin:1rem 0; font-size:0.875rem;}
+}
+
+// Utility Classes
+.enlarged-paragraph-type {font-size:1.1rem;}
+.table {display:table;}
+.relative {position:relative;}
+.green-text {color:$green;}
+.strong {font-weight:bold;}
+.radius {border-radius:5px;}
+.small-margin-bot {margin-bottom:.65rem;}
+.bg-gray-light {background:$gray-light;}
+
+.post-excerpt {}
+.post-single {}
+
+.post-navigation {text-align:center;
+  .seperator {display:inline-block; margin:0 15px;}
+}
+
+/* ############################## Media Queries ############################## */
+
+// Small AND Medium Screens
+@media only screen and (max-width:64em) {
+  header {position:static;
+    .header-flex-container {align-items:center;}
+  }
+  a.right-off-canvas-toggle {display:block !important;}
+  .push-down {content:''; margin-top:0;}
+  .home {
+    .hero {.slogan {line-height:1.2;}}
+  }
+  .banner {margin:0 0 2rem; width:100%; height:150px; background-repeat:no-repeat; background-position:center; background-size:cover;}
+}
+
+// Small Only
+@media only screen and (max-width: 40em) {
+  header {
+    .header-flex-container {
+      .logo {max-width:55%;
+        img {max-width:100%;}
+      }
+    }
+  }
+  .industries-served {
+    .flex-container {
+      .card {width:50%;}
+    }
+  }
+  .no-margin-stack {margin-bottom:0px;}
+  .home {
+    .hero {background-position:right top;
+      .slogan {font-size:1.75rem; top:95%; left:50%; transform: translate(-50%, -95%); padding-left:0; text-align:center; max-width:none; white-space: nowrap; text-shadow:0px 0px 15px rgba(255,255,255,1);}
+    }
+  }
+  footer{
+    p {margin-bottom:1rem;}
+    ul.contact {margin-bottom:0.75rem;}
+    ul.social {margin:0; position:static; bottom:auto;
+      li {list-style:none;
+        a {color:$green; font-size:1.5rem;
+          &:hover {color:darken($green, 10%);}
+        }
+      }
+    }
+  }
+  .vosb {
+    img {margin-top:1rem;}
+  }
+}
+
+// Medium Up
+@media only screen and (min-width: 40.063em) {}
+
+// Medium Only
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .home {
+    .hero {background-size:cover; background-position:80% 0;
+      .slogan {max-width:450px;}
+    }
+  }
+  .industries-served {
+    .flex-container {
+      .card {width:33%;}
+    }
+  }
+}
+ 
+// Large Up
+@media only screen and (min-width: 64.063em) {}
+
+// Large Only
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {} 
+
+// Kill WP Image Floats in css/wp.css
+@media only screen and (max-width:640px) {
+  .alignleft, img.alignleft, .alignright, img.alignright, blockquote.left, blockquote.right {display:block !important; text-align:center !important; margin-left: auto !important; float: none !important;}
+  .alignleft, img.alignleft, .alignright, img.alignright {display:block; margin-right:auto !important;}
+}
