@@ -65,26 +65,26 @@
 
 <?php wp_footer(); ?>
 <script>
-let $ = jQuery;
-$(document).foundation();
+
+jQuery(document).foundation();
 
 <?php if(is_front_page()) { ?>
-      $('.hide-slideshow').removeClass('hide-slideshow');
+  jQuery('.hide-slideshow').removeClass('hide-slideshow');
 <?php } ?>
 
 
-$(function(){
+jQuery(function(){
   var shrinkHeader = 50;
-  $(window).scroll(function() {
+  jQuery(window).scroll(function() {
     var scroll = getCurrentScroll();
       if ( scroll >= shrinkHeader ) {
 
-        if ($(window).width() > 1024) {
-          $('header').addClass('shrink');
+        if (jQuery(window).width() > 1024) {
+          jQuery('header').addClass('shrink');
         }
 
     } else {
-      $('header').removeClass('shrink');
+      jQuery('header').removeClass('shrink');
     }
   });
 
