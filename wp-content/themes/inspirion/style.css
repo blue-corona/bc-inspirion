@@ -681,6 +681,7 @@ margin-bottom: 25px;}
 @media (min-width: 768px) {
 	.third-column-from {margin: 0 -1%;}
 	.third-column-from .gform_fields > li{ float:left;margin:0 1% 15px;width: 31.333%;}
+    .third-column-from .gform_fields > li.half-column{ width: 48%;}
 	.third-column-from .gform_fields > li.full-column{ width: 98%;}
 	.third-column-from .gform_footer{ margin:65px 1% 0;}
 }
