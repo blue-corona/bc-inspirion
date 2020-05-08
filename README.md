@@ -1,5 +1,5 @@
 # bc-inspirion
-https://inspirionstage.wpengine.com/
+https://inspirion.wpengine.com/
 
 ![Version](assets/version.svg)
 ![Wordpress](assets/wordpress.svg)
