@@ -65,7 +65,7 @@
 
 <?php wp_footer(); ?>
 <script>
-  let $ = jQuery;
+let $ = jQuery;
 $(document).foundation();
 
 <?php if(is_front_page()) { ?>
