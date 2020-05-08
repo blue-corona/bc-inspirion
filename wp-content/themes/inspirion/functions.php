@@ -4,8 +4,9 @@ function pm_foundation_styles() {
   wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
   wp_enqueue_style( 'pm_foundation-style', get_template_directory_uri() . '/style.css' );
   wp_enqueue_style( 'wordpress-helper', get_template_directory_uri() . '/css/wp.min.css' );
-  wp_enqueue_style( 'gotham-font', '//cloud.typography.com/6307712/773888/css/fonts.css' );
-  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,700,700italic|Roboto+Condensed:400,700,700italic,400italic,300italic,300|Lato:300,400,700|Muli:300,400,500,600&display=swap' );
+  // wp_enqueue_style( 'gotham-font', '//cloud.typography.com/6307712/773888/css/fonts.css' ); Moved to locally hosted below because cdn is domain locked
+  wp_enqueue_style( 'gotham-font', get_template_directory_uri() . '/css/gotham.css' );
+  // wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,700,700italic|Roboto+Condensed:400,700,700italic,400italic,300italic,300|Lato:300,400,700|Muli:300,400,500,600&display=swap' );
   wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
   wp_enqueue_style( 'icomoon', get_template_directory_uri() . '/fonts/icomoon/style.css' );
   wp_enqueue_style( 'font-awesome5', get_template_directory_uri() . '/css/fontawesomepro5.css' );
